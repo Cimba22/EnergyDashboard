@@ -118,7 +118,3 @@ Below is a screenshot of a Postman request for retrieving energy data:
 
 
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
