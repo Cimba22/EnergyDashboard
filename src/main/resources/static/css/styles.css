@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0; /* Светлый фон для контраста */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Более тёмный цвет для заголовка */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #444; /* Умеренно тёмный цвет для подзаголовков */
+    margin: 20px 0 10px 0; /* Отступы для подзаголовков */
+    border-bottom: 2px solid #ddd; /* Лёгкая линия под подзаголовками */
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #444; /* Цвет для заголовков разделов */
+    margin: 10px 0; /* Отступы для заголовков разделов */
+}
+
+canvas {
+    max-width: 1200px; /* Увеличенная максимальная ширина графика */
+    margin: 20px auto; /* Центрирование графика */
+    display: block; /* Убираем дополнительные отступы */
+    height: 400px; /* Задаем фиксированную высоту для графика */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Белый фон для таблиц */
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc; /* Более нежные границы для таблицы */
+    text-align: left;
+}
+
+th {
+    background-color: #e9ecef; /* Светло-серый фон для заголовков таблицы */
+    color: #333; /* Тёмный цвет для текста заголовков */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Альтернативный фон для чётных строк */
+}
+
+input[type="number"], input[type="text"], input[type="date"] {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Нежная граница для полей ввода */
+    border-radius: 4px; /* Лёгкое закругление */
+    width: 150px; /* Установлена фиксированная ширина для полей ввода */
+    box-sizing: border-box; /* Учёт внутренних отступов в ширине */
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #007bff; /* Синий цвет для кнопок */
+    color: white;
+    border: none;
+    border-radius: 4px; /* Лёгкое закругление */
+    cursor: pointer;
+    margin-top: 10px; /* Отступ сверху для кнопок */
+    transition: background-color 0.3s; /* Плавный переход для фона */
+}
+
+button:hover {
+    background-color: #0056b3; /* Более тёмный синий при наведении */
+}
+
+.filter-container {
+    display: flex; /* Используем flex для компактного размещения */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    gap: 10px; /* Отступы между элементами */
+    margin-bottom: 20px; /* Отступ снизу для контейнера фильтров */
+}
+
+.comparison-section {
+    border: 1px solid #ddd; /* Лёгкая граница вокруг секции сравнения */
+    padding: 20px; /* Отступы внутри секции */
+    background-color: #ffffff; /* Белый фон для секции */
+    border-radius: 5px; /* Лёгкое закругление углов */
+    margin-bottom: 20px; /* Отступ снизу для секции */
+}
+
+#uploadStatus {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #28a745; /* Цвет успешного статуса */
+}

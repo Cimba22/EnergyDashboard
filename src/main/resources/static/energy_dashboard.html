@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Energy Dashboard</title>
+    <script src="js/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Подключение стилей -->
+</head>
+<body>
+<h1>Energy Dashboard</h1>
+
+<canvas id="energyChart" width="800" height="400"></canvas>
+
+<button onclick="fetchAllData()">Show All Data</button>
+
+<div class="filter-container">
+    <div>
+        <label for="minEnergy">Minimum Energy Consumed:</label>
+        <input type="number" id="minEnergy" step="0.1">
+        <button onclick="fetchFilteredData()">Filter Data</button>
+    </div>
+
+    <!-- Добавленные кнопки для скачивания -->
+    <div>
+        <button onclick="downloadData('json')">Download JSON</button>
+    </div>
+</div>
+
+<h2>Upload JSON Data</h2>
+<form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="jsonFile" accept=".json">
+    <button type="button" onclick="uploadFile()">Upload</button>
+</form>
+<div id="uploadStatus"></div>
+
+<h2>Compare Data</h2>
+<div class="comparison-section">
+    <div class="filter-container">
+        <div>
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate">
+        </div>
+        <div>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+        </div>
+        <div>
+            <button onclick="compareData()">Compare Data</button>
+        </div>
+    </div>
+
+    <h3>Comparison Results</h3>
+    <table id="comparisonTable" border="1">
+        <thead>
+        <tr>
+            <th>Station Name</th>
+            <th>Date</th>
+            <th>Energy Produced</th>
+            <th>Energy Consumed</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<h2>Filter Data</h2>
+<div class="filter-container">
+    <div>
+        <label for="startDateFilter">Start Date:</label>
+        <input type="date" id="startDateFilter">
+    </div>
+    <div>
+        <label for="endDateFilter">End Date:</label>
+        <input type="date" id="endDateFilter">
+    </div>
+    <div>
+        <label for="minEnergyFilter">Min Energy:</label>
+        <input type="number" id="minEnergyFilter" placeholder="Min Energy">
+    </div>
+    <div>
+        <label for="maxEnergyFilter">Max Energy:</label>
+        <input type="number" id="maxEnergyFilter" placeholder="Max Energy">
+    </div>
+    <div>
+        <label for="stationNameFilter">Station Name:</label>
+        <input type="text" id="stationNameFilter" placeholder="Station Name">
+    </div>
+    <div>
+        <button onclick="fetchFilteredData()">Filter Data</button>
+    </div>
+</div>
+
+<h2>Data</h2>
+<table id="dataTable" border="1">
+    <thead>
+    <tr>
+        <th>Station Name</th>
+        <th>Date</th>
+        <th>Energy Produced</th>
+        <th>Energy Consumed</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</body>
+</html>
